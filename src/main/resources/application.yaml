@@ -1,0 +1,22 @@
+server:
+  port: 8888  # 修改端口
+# 配置客户端的url
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888
+        instance:
+          prefer-ip: true   # 使用ip注册进来
+  application:
+    name: springboot-5  # 应用名称
+
+
+management:
+  endpoints:
+    enabled-by-default: true # 默认开启所有监控端点 true
+    web:
+      exposure:
+        include: '*'  # 以web方式暴露所有端点
+
+
